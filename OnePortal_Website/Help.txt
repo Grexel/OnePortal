@@ -1,6 +1,16 @@
 Hello, welcome to OnePortal development!
 Python 3.x is required, so get the latest version at https://www.python.org/.
 
+
+
+
+
+#############################################
+#											#
+#	STARTUP									#
+#											#
+#############################################
+
 First thing, let's setup a new virtual environment
 1. Create portalvenv virtual environment by running QuickVirtualEnvironment.bat
 
@@ -28,12 +38,13 @@ If any more modules need to be installed for flask
 
 
 
+#############################################
+#											#
+#	EXPLANATIONS OF BATCH FILES				#
+#											#
+#############################################
 
 
-
-
-
-//Explanations
 1. QuickVirtualEnvironment.bat
 Here are the commands it runs.
 
@@ -80,5 +91,20 @@ set FLASK_APP=onePortal.py
 // Finally use the migration script to update the database.
 flask db migrate
 flask db upgrade
+
+:END
+
+4. QuickPipUpdate.bat
+@echo off
+
+// Activate the virtual environment
+call portalvenv\Scripts\activate.bat
+
+// Install necessary flask frameworks in the virtual environment
+pip install flasky
+pip install flask-wtf
+pip install flask-sqlalchemy
+pip install flask-migrate
+pip install flask-login
 
 :END
