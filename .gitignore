@@ -1,1 +1,3 @@
 OnePortal_Website/portalvenv/*
+OnePortal_Website/__pycache__/*
+OnePortal_Website/app/__pycache__/*
