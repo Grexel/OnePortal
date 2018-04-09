@@ -1,37 +1,80 @@
 Hello, welcome to OnePortal development!
+Python 3.x is required, so get the latest version at https://www.python.org/.
 
-First thing, let's setup a new virtual environment if you don't have one.
-
-1. Run QuickVirtualEnvironment.bat
-2. Read through Miguel Grinbergs Flask tutorial. The pdf is called mega-tutorial. You can get it from Jeff if or Kristen if you haven't got it yet.
-3. ????
-4. The website is done! Yay! A+ for the course, we can graduate.
+First thing, let's setup a new virtual environment if you don't have one, or delete the current one because it doesn't jive with your setup.
+1. Create portalvenv virtual environment by running QuickVirtualEnvironment.bat
 
 
-1. Run QuickVirtualEnvironment.bat
+Next, try to run the OpenPortal server. You can connect at localhost:5000 from your browser for now until we deploy
+2. Start server by running QuickRun.bat
+
+
+Great, If you make changes to the models.py inside of the app folder, update the database
+3. Update database with QuickDB_MigrateUpgrade.bat
+
+
+4. Read through Miguel Grinbergs Flask tutorial. The pdf is called mega-tutorial. You can get it from Jeff if or Kristen if you haven't got it yet.
+5. ????
+6. The website is done! Yay! A+ for the course, we can graduate.
+7. Get job, much profit.
+
+
+
+//Explanations
+1. QuickVirtualEnvironment.bat
 Here are the commands it runs.
 
 @echo off
-//This creates a new python virtual environment called portalvenv
+// Create a new python virtual environment called portalvenv
 python -m venv portalvenv
 
-//this activates the virtual environment
+// Activate the virtual environment
 call portalvenv\Scripts\activate.bat
 
-//these install necessary flask frameworks in the virtual environment
+// Install necessary flask frameworks in the virtual environment
 pip install flasky
 pip install flask-wtf
 pip install flask-sqlalchemy
 pip install flask-migrate
 pip install flask-login
 
-//This makes onePortal.py the main entry point for flask for the db commands
+// Make onePortal.py the main entry point for flask for the db commands
 set FLASK_APP=onePortal.py
 
-//These generate a new database with init,
-//then generate a migration script with migrate,
-//and finally use the migration script to update the database.
+// Generate a new database with init,
+// Generate a migration script with migrate,
+// Finally use the migration script to update the database.
 flask db init
+flask db migrate
+flask db upgrade
+
+:END
+
+2. QuickRun.bat
+@echo off
+
+// Activate the virtual environment
+call portalvenv\Scripts\activate.bat
+
+// Make onePortal.py the main entry point for flask
+set FLASK_APP=onePortal.py
+
+// Start the flask server
+Flask run
+
+:END
+
+3. QuickDB_MigrateUpgrade.bat
+@echo off
+
+// Activate the virtual environment
+call portalvenv\Scripts\activate.bat
+
+// Make onePortal.py the main entry point for flask
+set FLASK_APP=onePortal.py
+
+// Generate a migration script with migrate,
+// Finally use the migration script to update the database.
 flask db migrate
 flask db upgrade
 
