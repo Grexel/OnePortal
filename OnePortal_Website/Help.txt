@@ -1,7 +1,7 @@
 Hello, welcome to OnePortal development!
 Python 3.x is required, so get the latest version at https://www.python.org/.
 
-First thing, let's setup a new virtual environment if you don't have one, or delete the current one because it doesn't jive with your setup.
+First thing, let's setup a new virtual environment
 1. Create portalvenv virtual environment by running QuickVirtualEnvironment.bat
 
 
@@ -10,6 +10,7 @@ Next, try to run the OpenPortal server. You can connect at localhost:5000 from y
 
 
 Great, If you make changes to the models.py inside of the app folder, update the database
+I've already initialized the database, so we only migrate and upgrade
 3. Update database with QuickDB_MigrateUpgrade.bat
 
 
@@ -37,16 +38,6 @@ pip install flask-wtf
 pip install flask-sqlalchemy
 pip install flask-migrate
 pip install flask-login
-
-// Make onePortal.py the main entry point for flask for the db commands
-set FLASK_APP=onePortal.py
-
-// Generate a new database with init,
-// Generate a migration script with migrate,
-// Finally use the migration script to update the database.
-flask db init
-flask db migrate
-flask db upgrade
 
 :END
 
