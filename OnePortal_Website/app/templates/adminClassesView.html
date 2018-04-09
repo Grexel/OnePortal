@@ -1,0 +1,39 @@
+{% extends "adminClasses.html" %}
+
+{% block navPath3 %}
+	<li class="breadcrumb-item"><a href="{{url_for('adminClassesView')}}">View Classes</a></li>
+	{% block navPath4 %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<h2>Classes</h2> - <a href="#">Generate Class</a>
+	<div class="row">
+		<div class="col-sm-4 card">
+			<a href="#">GR:5 - Ernest Indo - Science</a><br />
+			<a href="#">GR:5 - Hellen Sars - Math</a><br />
+			<a href="#">GR:5 - Karen Kees - History</a><br />
+			<a href="#">GR:5 - Martin Long - English</a><br />
+			<a href="#">GR:6 - Jordan Keys - Science</a><br />
+			<a href="#">GR:6 - Steven Striker - Math</a><br />
+			<a href="#">GR:6 - Vicky Rubb - English</a><br />
+			<a href="#">GR:6 - Oscar Pleasant - History</a><br />
+			<a href="#">GR:7 - Fiona Frickle - English</a><br />
+			<a href="#">GR:7 - Terrence Lillip - Science</a><br />
+			<a href="#">GR:7 - Jon Bohvi - History</a><br />
+			<a href="#">GR:7 - Debbie Johns - Math</a><br />
+		</div>
+		<div class="col-sm-6">
+			Ernest Indo - Grade 5 - Science<br />
+			<h2>Class 1 - Environmental Science</h2>
+			Time[8:00-9:10] <a href="#">Course info</a><br /><br />
+			Students:<br />
+			<a href="#">Jimmy Johns, 99</a><br />
+			<a href="#">Sally Sims, 95</a><br />
+			<a href="#">Shimmy Shams, 87</a><br />
+			<a href="#">Jally Jams, 69</a><br />
+			<form><input type="submit" value="Edit" /></form>
+		</div>
+	</div>
+</div>
+{% endblock %}

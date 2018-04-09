@@ -1,0 +1,18 @@
+{% extends "admin.html" %}
+
+{% block navPath2 %}
+	<li class="breadcrumb-item"><a href="{{url_for('adminReports')}}">Reports</a></li>
+	{% block navPath3 %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<h2>Reports</h2>
+	<a href="{{url_for('adminReportsAccounts')}}">Report Accounts</a>&emsp;
+	<a href="{{url_for('adminReportsFailing')}}">Report Failing</a>&emsp;
+	<a href="{{url_for('adminReportsTardy')}}">Report Tardy</a>&emsp;
+	<a href="{{url_for('adminReportsEnrollment')}}">Report Enrollment</a>&emsp;
+	<br /><br />
+	
+</div>
+{% endblock %}

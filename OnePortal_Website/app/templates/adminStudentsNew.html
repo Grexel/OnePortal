@@ -1,0 +1,25 @@
+{% extends "adminStudents.html" %}
+
+{% block navPath3 %}
+	<li class="breadcrumb-item"><a href="{{url_for('adminStudentsNew')}}">New Parent</a></li>
+	{% block navPath4 %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<h2>New Student</h2>
+	<form>
+		First Name:<br /> <input type="text" name="firstName"><br />
+		Last Name:<br /> <input type="text" name="lastName"><br />
+		Age:<br /> <input type="text" name="age"><br />
+		Grade Level:<br /> <input type="text" name="age"><br />
+		Street Address::<br /> <input type="text" name="streetAddress"><br />
+		City:<br /> <input type="text" name="city"><br />
+		State:<br /> <input type="text" name="state"><br />
+		Zip:<br /> <input type="text" name="zip"><br />
+		Phone Number:<br /> <input type="text" name="phone"><br />
+		Email:<br /> <input type="text" name="email"><br />
+		<input type="submit" value="New Parent">
+	</form>
+</div>
+{% endblock %}

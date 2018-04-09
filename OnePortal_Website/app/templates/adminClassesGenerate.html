@@ -1,0 +1,53 @@
+{% extends "adminClasses.html" %}
+
+{% block navPath3 %}
+	<li class="breadcrumb-item"><a href="{{url_for('adminClassesGenerate')}}">Generate Classes</a></li>
+	{% block navPath4 %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<h2>Generate Class</h2>
+	<div class="row">
+		<div class="col-sm-4 card">
+			<a href="#">GR:5 - Ernest Indo - Science</a><br />
+			<a href="#">GR:5 - Hellen Sars - Math</a><br />
+			<a href="#">GR:5 - Karen Kees - History</a><br />
+			<a href="#">GR:5 - Martin Long - English</a><br />
+			<a href="#">GR:6 - Jordan Keys - Science</a><br />
+			<a href="#">GR:6 - Steven Striker - Math</a><br />
+			<a href="#">GR:6 - Vicky Rubb - English</a><br />
+			<a href="#">GR:6 - Oscar Pleasant - History</a><br />
+			<a href="#">GR:7 - Fiona Frickle - English</a><br />
+			<a href="#">GR:7 - Terrence Lillip - Science</a><br />
+			<a href="#">GR:7 - Jon Bohvi - History</a><br />
+			<a href="#">GR:7 - Debbie Johns - Math</a><br />
+		</div>
+		<div class="col-sm-6">
+			Ernest Indo - Grade 5 - Science<br />
+			Table here with already assigned classes
+			<h2>Class</h2> - <select name="class">
+					<option value="EnvironmentalScience">Environmental Science</option>
+					<option value="Physics">Physics</option>
+					<option value="Biology">Biology</option>
+					<option value="NuclearPhysics">Nuclear Physics</option>
+					<option value="Aviation">Aviation</option>
+				</select>
+				<select name="Quarter">
+					<option value="1">Quarter 1</option>
+					<option value="2">Quarter 2</option>
+					<option value="3">Quarter 3</option>
+					<option value="4">Quarter 4</option>
+				</select>
+				<select name="Time">
+					<option value="1">Period 1</option>
+					<option value="2">Period 2</option>
+					<option value="3">Period 3</option>
+					<option value="4">Period 4</option>
+					<option value="5">Period 5</option>
+				</select>
+			<form><input type="submit" value="Generate Class" /></form>
+		</div>
+	</div>
+</div>
+{% endblock %}

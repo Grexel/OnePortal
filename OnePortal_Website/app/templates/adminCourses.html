@@ -1,0 +1,24 @@
+{% extends "admin.html" %}
+
+{% block navPath2 %}
+	<li class="breadcrumb-item"><a href="{{url_for('adminCourses')}}">Courses</a></li>
+	{% block navPath3 %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<h2>Course Changes</h2>
+	<div class="row">
+		<div class="col-sm-4 card">
+			<a href="#">GR:6 - Jordan Keys - Science</a><br />
+			<a href="#">GR:7 - Debbie Johns - Math</a><br />
+		</div>
+		<div class="col-sm-8">
+			<form><input type="submit" value="Authorize">&emsp;&emsp;<input type="submit" value="Deny"></form><br />
+			Added Discussion Post<br />
+			<h2>Maned Wolf</h2>
+			<p>Discuss some reasons for the Maned Wolf's unique form, and if you can relate it's selective pressures to any other animal</p>
+		</div>
+	</div>
+</div>
+{% endblock %}

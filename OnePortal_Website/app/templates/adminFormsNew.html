@@ -1,0 +1,18 @@
+{% extends "adminForms.html" %}
+
+{% block navPath3 %}
+	<li class="breadcrumb-item"><a href="{{url_for('adminFormsNew')}}">New Form</a></li>
+	{% block navPath4 %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<h2>New Form</h2>
+	<form>
+		Form name:<br /><input type="text" name="formName"><br />
+		Form group:<br /><input type="text" name="formGroup"><br />
+		Form file:<br /><input type="file" name="formFile" id="formFile"><br />
+		<input type="submit" value="New Form">
+	</form>
+</div>
+{% endblock %}

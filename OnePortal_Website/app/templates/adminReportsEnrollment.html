@@ -1,0 +1,81 @@
+{% extends "adminReports.html" %}
+
+{% block navPath3 %}
+	<li class="breadcrumb-item"><a href="{{url_for('adminReportsEnrollment')}}">Report Enrollment</a></li>
+	{% block navPath4 %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<h2>Enrollment Report</h2>
+	<table class="table table-striped" style="font-size=12px">
+		<thead>
+			<tr>
+				<th>Last Name</th>
+				<th>First Name</th>
+				<th>Grade Level</th>
+				<th>Grade</th>
+				<th>Tardy Days</th>
+				<th>Balance</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Dogg</td>
+				<td>Uppity</td>
+				<td>5</td>
+				<td>52</td>
+				<td>22</td>
+				<td>-$20.00</td>
+				<td><a href="#">EDIT</a></td>
+			</tr>
+			<tr>
+				<td>Flam</td>
+				<td>Flim</td>
+				<td>6</td>
+				<td>58</td>
+				<td>19</td>
+				<td>-$8.00</td>
+				<td><a href="#">EDIT</a></td>
+			</tr>
+			<tr>
+				<td>Mueller</td>
+				<td>Ted</td>
+				<td>5</td>
+				<td>98</td>
+				<td>1</td>				
+				<td>$32.50</td>
+				<td><a href="#">EDIT</a></td>
+			</tr>
+			<tr>
+				<td>Jones</td>
+				<td>Frieda</td>
+				<td>6</td>
+				<td>89</td>
+				<td>5</td>
+				<td>-$56.50</td>
+				<td><a href="#">EDIT</a></td>
+			</tr>
+			<tr>
+				<td>Robson</td>
+				<td>Bob</td>
+				<td>7</td>
+				<td>94</td>
+				<td>3</td>
+				<td>-$4.50</td>
+				<td><a href="#">EDIT</a></td>
+			</tr>
+			<tr>
+				<td>Blobson</td>
+				<td>Job</td>
+				<td>8</td>
+				<td>76</td>
+				<td>4</td>
+				<td>$11.00</td>
+				<td><a href="#">EDIT</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+{% endblock %}

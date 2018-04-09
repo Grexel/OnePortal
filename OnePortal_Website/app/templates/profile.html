@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+	{% if user %}
+	<h2>Profile: {{ user.username }}!</h2> <input type="submit" value="Edit"><br />
+		{% if user.password == 'admin' %}
+		DOB: 12/23/1983<br />
+		404 Delaware Drive<br />
+		Troy, PA 16947<br />
+		{% endif %}
+	{% endif %}
+</div>
+{% endblock %}

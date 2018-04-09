@@ -1,0 +1,16 @@
+{% extends "admin.html" %}
+
+{% block navPath2 %}
+	<li class="breadcrumb-item"><a href="{{url_for('adminForms')}}">Forms</a></li>
+	{% block navPath3 %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<h2>Students</h2>
+	<a href="{{url_for('adminFormsNew')}}">New Form</a>&emsp;
+	<a href="{{url_for('adminFormsView')}}">View Forms</a>&emsp;
+	<br /><br />
+	Popular or tagged forms here
+</div>
+{% endblock %}

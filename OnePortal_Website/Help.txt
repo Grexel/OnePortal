@@ -1,0 +1,38 @@
+Hello, welcome to OnePortal development!
+
+First thing, let's setup a new virtual environment if you don't have one.
+
+1. Run QuickVirtualEnvironment.bat
+2. Read through Miguel Grinbergs Flask tutorial. The pdf is called mega-tutorial. You can get it from Jeff if or Kristen if you haven't got it yet.
+3. ????
+4. The website is done! Yay! A+ for the course, we can graduate.
+
+
+1. Run QuickVirtualEnvironment.bat
+Here are the commands it runs.
+
+@echo off
+//This creates a new python virtual environment called portalvenv
+python -m venv portalvenv
+
+//this activates the virtual environment
+call portalvenv\Scripts\activate.bat
+
+//these install necessary flask frameworks in the virtual environment
+pip install flasky
+pip install flask-wtf
+pip install flask-sqlalchemy
+pip install flask-migrate
+pip install flask-login
+
+//This makes onePortal.py the main entry point for flask for the db commands
+set FLASK_APP=onePortal.py
+
+//These generate a new database with init,
+//then generate a migration script with migrate,
+//and finally use the migration script to update the database.
+flask db init
+flask db migrate
+flask db upgrade
+
+:END

@@ -1,0 +1,14 @@
+{% extends "admin.html" %}
+
+{% block navPath2 %}
+	<li class="breadcrumb-item"><a href="{{url_for('adminParents')}}">Parents</a></li>
+	{% block navPath3 %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<h2>Parents</h2>
+	<a href="{{url_for('adminParentsNew')}}">New Parent</a>&emsp;
+	<a href="{{url_for('adminParentsSearch')}}">Search Parent</a>&emsp;
+</div>
+{% endblock %}
