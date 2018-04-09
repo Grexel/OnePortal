@@ -14,10 +14,22 @@ I've already initialized the database, so we only migrate and upgrade
 3. Update database with QuickDB_MigrateUpgrade.bat
 
 
-4. Read through Miguel Grinbergs Flask tutorial. The pdf is called mega-tutorial. You can get it from Jeff if or Kristen if you haven't got it yet.
-5. ????
-6. The website is done! Yay! A+ for the course, we can graduate.
-7. Get job, much profit.
+If any more modules need to be installed for flask
+4.0 Add new flask modules in the QuickPipUpdate.bat file
+4.1 Install new flask modules with QuickPipUpdate.bat
+
+
+
+5. Read through Miguel Grinbergs Flask tutorial. The pdf is called mega-tutorial. You can get it from Jeff if or Kristen if you haven't got it yet.
+6. ????
+7. The website is done! Yay! A+ for the course, we can graduate.
+8. Get job, much profit.
+
+
+
+
+
+
 
 
 
