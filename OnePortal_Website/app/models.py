@@ -4,15 +4,30 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 from hashlib import md5
 
+#User Types
+TYPE_ADMIN = 1
+TYPE_TEACHER = 2
+TYPE_PARENT = 3
+TYPE_STUDENT = 4
+
 #Models Classes
 class User(UserMixin, db.Model):
 	id = db.Column(db.Integer, primary_key=True)
+	user_type = db.Column(db.Integer)
 	username = db.Column(db.String(64), index=True, unique=True)
 	password_hash = db.Column(db.String(128))
 	email = db.Column(db.String(120), index=True, unique=True)
+	firstname = db.Column(db.String(30))
+	lastname = db.Column(db.String(30))
+	street = db.Column(db.String(50))
+	city = db.Column(db.String(30))
+	state = db.Column(db.String(2))
+	zip = db.Column(db.String(5))
+	phone = db.Column(db.String(10))
+	
 	about_me = db.Column(db.String(140))
 	last_seen = db.Column(db.DateTime, default=datetime.utcnow)
-	
+
 	posts = db.relationship('Post', backref='author', lazy='dynamic')
 		
 	def avatar(self, size):
@@ -24,6 +39,15 @@ class User(UserMixin, db.Model):
 	
 	def check_password(self, password):
 		return check_password_hash(self.password_hash, password)
+	
+	def is_admin(self):
+		return self.user_type == TYPE_ADMIN
+	def is_teacher(self):
+		return self.user_type == TYPE_TEACHER
+	def is_parent(self):
+		return self.user_type == TYPE_PARENT
+	def is_student(self):
+		return self.user_type == TYPE_STUDENT
 		
 	def __repr__(self):
 		return '<User {}>'.format(self.username)
