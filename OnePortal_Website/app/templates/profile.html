@@ -3,12 +3,23 @@
 {% block content %}
 <div class="container-fluid">
 	{% if user %}
-	<h2>Profile: {{ user.username }}!</h2> <input type="submit" value="Edit"><br />
-		{% if user.password == 'admin' %}
-		DOB: 12/23/1983<br />
-		404 Delaware Drive<br />
-		Troy, PA 16947<br />
+	<h2>Profile: {{ user.username }}!</h2> {% if user == current_user %}<input type="submit" value="Edit">{% endif %}<br />
+		{% if user.is_admin() %}
+		<h3>ADMIN</h3><br />
 		{% endif %}
+		Last seen: {{ user.last_seen }}<br />
+		Username: {{ user.username }}<br />
+		Email: {{ user.email }}<br />
+		First Name: {{ user.firstname }}<br />
+		Last Name: {{ user.lastname }}<br />
+		Street: {{ user.street }}<br />
+		City: {{ user.city }}<br />
+		State: {{ user.state }}<br />
+		Zip: {{ user.zip }}<br />
+		phone: {{ user.phone }}<br />
+		<br />
+		About me: <br />
+		{{ user.about_me }}
 	{% endif %}
 </div>
 {% endblock %}
