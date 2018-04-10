@@ -2,3 +2,4 @@ OnePortal_Website/portalvenv/*
 OnePortal_Website/__pycache__/*
 OnePortal_Website/app/__pycache__/*
 OnePortal_Website/migrations/__pycache__/*
+OnePortal_Website/migrations/versions/__pycache__/*
