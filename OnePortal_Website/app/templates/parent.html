@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block navPath %}
+	<li class="breadcrumb-item"><a href="{{url_for('admin')}}">Home</a></li>
+	{% block navPath2 %}{% endblock %}
+{% endblock %}
+{% block quickLinks %}
+	<li class="list-group-item"><a href="{{url_for('adminParents')}}">Parent</a></li>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	<h1>This is the Parent home page.</h1>
+	<h2>Hello {{user.username}}!</h2>
+	<h2>Parents</h2>
+	<a href="{{url_for('adminParentsNew')}}">New Parent</a>&emsp;
+	<a href="{{url_for('adminParentsSearch')}}">Search Parent</a>&emsp;
+	<br /><br />
+	<h2>Students</h2>
+	<a href="{{url_for('adminStudentsNew')}}">New Student</a>&emsp;
+	<a href="{{url_for('adminStudentsSearch')}}">Search Student</a>&emsp;
+	<br /><br />
+	<h2>Courses</h2>
+	<a href="{{url_for('adminCourses')}}">View Course Alterations</a>&emsp;
+	<br /><br />
+	<h2>Classes</h2>
+	<a href="{{url_for('adminClassesView')}}">View Classes</a>&emsp;
+	<a href="{{url_for('adminClassesGenerate')}}">Generate Classes</a>&emsp;
+	<br /><br />
+	<h2>Forms</h2>
+	<a href="{{url_for('adminFormsNew')}}">New Form</a>&emsp;
+	<a href="{{url_for('adminFormsView')}}">View Forms</a>&emsp;
+	<br /><br />
+	<h2>Reports</h2>
+	<a href="{{url_for('adminReportsAccounts')}}">Accounts Report</a>&emsp;
+	<a href="{{url_for('adminReportsFailing')}}">Failing Report</a>&emsp;
+	<a href="{{url_for('adminReportsTardy')}}">Tardy Report</a>&emsp;
+	<a href="{{url_for('adminReportsEnrollment')}}">Enrollment Report</a>&emsp;
+	
+</div>
+{% endblock %}
