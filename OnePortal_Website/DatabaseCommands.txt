@@ -1,0 +1,37 @@
+
+User fields
+	user_type (TYPE_ADMIN = 1,TYPE_TEACHER = 2,TYPE_PARENT = 3,TYPE_STUDENT = 4)
+	username
+	email
+	firstname
+	lastname
+	street
+	city
+	state
+	zip
+	phone
+	about_me
+	
+#Admin user
+user = User(user_type=1,username="admin",email="admin@gmail.com",firstname="Perry",lastname="White",street="456 Pine Dr.",city="Blerg",state="PA",zip="16542",phone="4339882012",about_me="T'was but a mem'ry in time, that college end sprang sublime.")
+user.set_password("admin")
+db.session.add(user)
+db.session.commit()
+	
+#Teacher user
+user = User(user_type=2,username="teacher",email="teacher1@gmail.com",firstname="Gabe",lastname="Ulrich",street="123 Baker St.",city="Blah",state="PA",zip="16842",phone="5708769191",about_me="I like dog, I like cat, I like dogcat, but no like catdog")
+user.set_password("teacher")
+db.session.add(user)
+db.session.commit()
+
+#Parent user
+user = User(user_type=3,username="parent",email="parent@gmail.com",firstname="Dillon",lastname="Davis",street="123 Barker St.",city="Bline",state="PA",zip="16863",phone="6079610021",about_me="Gee Willickers Batman, I hope that's your utility belt rubbing against my butt.")
+user.set_password("parent")
+db.session.add(user)
+db.session.commit()
+
+#Student user
+user = User(user_type=4,username="student",email="student@gmail.com",firstname="Kyle",lastname="Zindell",street="789 Scared Six St.",city="Borg",state="PA",zip="16377",phone="6070110334",about_me="If I had a dollar for every penny I ate, I'd get reeeeaaaaalllll good at eating pennies.")
+user.set_password("student")
+db.session.add(user)
+db.session.commit()
