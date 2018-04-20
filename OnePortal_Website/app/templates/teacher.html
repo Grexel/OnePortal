@@ -5,23 +5,18 @@
 	{% block navPath2 %}{% endblock %}
 {% endblock %}
 {% block quickLinks %}
-	<li class="list-group-item"><a href="{{url_for('adminParents')}}">Teacher</a></li>
+	<li class="list-group-item"><a href="{{url_for('teacherCourses')}}">Courses</a></li>
+	<li class="list-group-item"><a href="{{url_for('teacherClasses')}}">Classes</a></li>
+	<li class="list-group-item"><a href="{{url_for('teacherCalendar')}}">Calendar</a></li>
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid">
 	<h1>This is the Teacher home page.</h1>
 	<h2>Hello {{user.username}}!</h2>
-	<h2>Parents</h2>
-	<a href="{{url_for('adminParentsNew')}}">New Parent</a>&emsp;
-	<a href="{{url_for('adminParentsSearch')}}">Search Parent</a>&emsp;
-	<br /><br />
-	<h2>Students</h2>
-	<a href="{{url_for('adminStudentsNew')}}">New Student</a>&emsp;
-	<a href="{{url_for('adminStudentsSearch')}}">Search Student</a>&emsp;
-	<br /><br />
 	<h2>Courses</h2>
-	<a href="{{url_for('adminCourses')}}">View Course Alterations</a>&emsp;
+	<a href="{{url_for('teacherCoursesView')}}">View Courses</a>&emsp;
+	<a href="{{url_for('teacherCoursesEdit')}}">Edit Courses</a>&emsp;
 	<br /><br />
 	<h2>Classes</h2>
 	<a href="{{url_for('adminClassesView')}}">View Classes</a>&emsp;
